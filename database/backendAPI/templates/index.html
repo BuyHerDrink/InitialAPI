@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<title>It works!</title>
+<body>
+    <div>
+        <p>
+            System test. Non-production!
+        </p>
+    </div>
+    <form action="/login" method="POST">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <button type="submit">Login</button>
+    
+    </form>
+
+    <p>New User? Register below!</p>
+    
+    <form action="/register" method="POST">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+    
+        <label for="password"><b>Password</b></label>
+        <input type="text" placeholder="Enter New Password" name="password" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email">
+
+        <label for="age"><b>Age</b></label>
+        <input type="number" placeholder="Enter Age" name="age" value="0">
+        
+        <label for="phone"><b>Phone</b></label>
+        <input type="number" placeholder="Enter Phone" name="phone" value="0">
+        
+        <label for="sex_orientation"><b>Sex</b></label>
+        <input type="text" placeholder="Enter Sex" name="sex_orientation">
+
+        <label for="address"><b>Address</b></label>
+        <input type="text" placeholder="Enter Address" name="address">
+
+        <label for="interests"><b>Interests</b></label>
+        <input type="text" placeholder="Enter Interests" name="interests">
+
+        <button type="submit">Register</button>
+    </form>
+    <p>Get list of Users when logged in.</p>
+    <form action="/getusers" method="POST">
+        <button type="submit">Get Users</button>
+    </form>
+
+    <p>Get current logged in User</p>
+    <form action="/getusers" method="GET">
+        <button type="submit">Get User Info</button>
+    </form>
+    
+    <p>Edit User Info</p>
+    <form action="/editself" method="GET">
+        <button type="submit">Edit User Info</button>
+    </form>
+    <p>Get posts made by Logged in User</p>
+    <form action="/mypost" method="GET">
+        <button type="submit">Get User Posts</button>
+    </form>
+
+    <p>Get posts by location</p>
+    <form action="/findnearby" method="GET">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter City, Town, etc" name="city" required>
+
+        <button type="submit">Get User Posts</button>
+    </form>
+    <p>Edit posts made by user</p>
+    <form action="/editposts" method="GET">
+
+        <button type="submit">View Editable Posts</button>
+    </form>
+    <p>Get all Posts</p>
+    <form action="/allposts" method="GET">
+        <button type="submit">Get All Posts</button>
+    </form>
+
+
+    <p>Quick Create Post</p>
+    <form action="/createpost" method="POST">
+
+
+        <button type="submit">Create Post</button>
+    </form>
+
+    <p>Create Post</p>
+    <form action="/createpost" method="POST">
+        <label for="body"><b>Title</b></label>
+        <input type="text" placeholder="Enter Title" name="title" required>
+        <br>
+        <label for="message"><b>Message</b></label>
+        <textarea placeholder="Enter Message" name="body" rows="4" cols="50"required></textarea>
+        <br>
+        
+        <input id="on" type="radio" name="active" value="1">
+        <label for="on"><b>Active Posting</b></label>
+        <input id="off" type="radio" name="active" value="0">
+        <label for="off"><b>Not Active</b></label>
+        
+        <button type="submit">Create Post</button>
+    </form>
+   
+    <p>Logout.</p>
+    <form action="/logout" method="POST">
+        <button type="submit">Logout</button>
+    </form>
+
+
+</form>
+</body>
