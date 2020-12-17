@@ -1,4 +1,4 @@
-connection_string='mysql://root:root@localhost/buyherdrink'
+connection_string='DBA String'
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
